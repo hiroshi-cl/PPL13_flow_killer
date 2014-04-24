@@ -1,0 +1,18 @@
+#--- dependencies on other JPF projects
+#@using = jpf-awt
+#@using = jpf-shell
+
+#--- what JPF should run
+target = TestExample2
+classpath = bin
+
+#--- other stuff that defines how to run JPF
+#listener+=,.listener.OverlappingMethodAnalyzer
+
+shell=.shell.basicshell.BasicShell
+#awt.script=${config_path}/RobotManager-thread.es
+#cg.enumerate_random=true
+#...
+
+ecd.submitting = Counter.submitResult
+ecd.counted = Counter.inc
